@@ -5,44 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Smash Brothers Select</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
    <header>
-       <h1>Choose Your Character</h1>
+        <div class="header-bg">
+            <img src="assets/header-bg-image.png" alt="">
+        </div>
+        <h1>Choose Your Fighter!</h1>
    </header>
-   
    <main>
-        <form action="">
-            <fieldset class="gender">
-                <p>Choose your Gender</p>
+        <form action="#">
+            <fieldset class="gender question">
+                <p>1. Choose your Gender</p>
                 <label for="male">Male</label>
-                <input type="radio" name="gender" id="male" value="male">
+                <input type="radio" name="gender" required id="male" value="male">
                 <label for="female">Female</label>
                 <input type="radio" name="gender" id="female" value="female">
                 <label for="nonHuman">Non-human</label>
                 <input type="radio" name="gender" id="nonHuman" value="nonHuman">
             </fieldset>
-            <fieldset class="archetype">
+            <fieldset class="archetype question">
                 <p>Choose your archetype</p>
                 <label for="hero">Heroic</label>
-                <input type="radio" name="type" id="hero" value="hero">
+                <input type="radio" name="type" required id="hero" value="hero">
                 <label for="cute">Cute</label>
                 <input type="radio" name="type" id="cute" value="cute">
                 <label for="badAss">Bad-Ass</label>
                 <input type="radio" name="type" id="badAss" value="badAss">
             </fieldset>
-            <fieldset class="range">
-                <p>Choose your style</p>
-                <label for="longRange">Long-range</label>
-                <input type="radio" name="range" id="longRange" value="longRange">
-                <label for="closeRange">Close-range</label>
-                <input type="radio" name="range" id="closeRange" value="closeRange">
-            </fieldset>
-            <fieldset class="weapon">
+            <fieldset class="weapon question">
                 <p>Choose your weapon</p>
                 <label for="physical">Physical</label>
-                <input type="radio" name="weapon" id="physical" value="physical">
+                <input type="radio" name="weapon" required id="physical" value="physical">
                 <label for="magic">Magical</label>
                 <input type="radio" name="weapon" id="magical" value="magical">
                 
@@ -52,7 +48,12 @@
             </fieldset>
         </form>
         
-        <section class="results">
+        <section>
+            <div class="results-container"></div>
+            <div class="results"></div>
+            <div class="character-image">
+                <img>
+            </div>
         </section>
 
    </main>
