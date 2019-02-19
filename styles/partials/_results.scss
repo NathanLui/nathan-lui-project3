@@ -33,7 +33,7 @@
     color: #363a3d;
 }
 
-@media(max-width: 950px) {
+@media(max-width: 1000px) {
     .results {
         font-size: 5rem;
     }
@@ -43,15 +43,27 @@
     }
 }
 
-@media(max-width: 650px) {
+@media(max-width: 750px) {
     .results {
         font-size: 4rem;
     }
     .origin {
         font-size: 3rem;
     }
+
+    .info-container {
+        justify-content: flex-start;
+    }
 }
 
+@media(max-width: 500px) {
+    .results {
+        font-size: 3rem;
+    }
+    .origin {
+        font-size: 2rem;
+    }
+}
 .origin { 
     font-family: 'Mouse Memoirs', sans-serif;
     font-size: 5rem;

@@ -237,7 +237,7 @@ input[type='submit'] {
   font-family: 'Luckiest Guy', cursive;
   color: #363a3d;
   font-size: 4rem;
-  margin-left: 1.5%; }
+  margin-left: 0 1.5%; }
 
 @media (max-width: 980px) {
   input[type='submit'] {
@@ -295,17 +295,27 @@ label {
   padding-top: 10%;
   color: #363a3d; }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
   .results {
     font-size: 5rem; }
   .origin {
     font-size: 4rem; } }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
   .results {
     font-size: 4rem; }
   .origin {
-    font-size: 3rem; } }
+    font-size: 3rem; }
+  .info-container {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; } }
+
+@media (max-width: 500px) {
+  .results {
+    font-size: 3rem; }
+  .origin {
+    font-size: 2rem; } }
 
 .origin {
   font-family: 'Mouse Memoirs', sans-serif;
