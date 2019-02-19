@@ -50,7 +50,7 @@ const characters = [
     },
     {   
         name: 'Kirby',
-        origin: 'Kirby\'s Dream Land',
+        origin: 'Kirby\'s Dream Land (1992)',
         image: 'assets/kirby.jpg',
         gender: 'nonHuman',
         archetype: 'cute',
@@ -98,7 +98,7 @@ const characters = [
     },
     {   
         name: 'Jigglypuff',
-        origin: 'Pokemon Red and Blue',
+        origin: 'Pokemon Red and Blue (1998)',
         image: 'assets/jigglypuff.jpg',
         gender: 'nonHuman',
         archetype: 'cute',
@@ -258,7 +258,7 @@ const characters = [
     }, 
     {   
         name: 'Dark Pit',
-        origin: 'Kid Icarus: Uprising',
+        origin: 'Kid Icarus: Uprising (2012)',
         image: 'assets/darkpit.jpg',
         gender: 'male',
         archetype: 'badAss',
@@ -266,7 +266,7 @@ const characters = [
     },
     {   
         name: 'Zero Suit Samus',
-        origin: 'Metroid: Zero Mission',
+        origin: 'Metroid: Zero Mission (2004)',
         image: 'assets/zerosuitsamus.jpg',
         gender: 'female',
         archetype: 'badAss',
@@ -330,7 +330,7 @@ const characters = [
     },
     {
         name: 'King Dedede',
-        origin: "Kirby's Dream Land",
+        origin: "Kirby's Dream Land (1992)",
         image: 'assets/kingdedede.jpg',
         gender: 'nonHuman',
         archetype: 'badAss',
@@ -346,14 +346,14 @@ const characters = [
     },
     {
         name: 'Lucario',
-        origin: 'Pokemon: Diamond and Pearl',
+        origin: 'Pokemon: Diamond and Pearl (2006)',
         image: 'assets/lucario.jpg',
         gender: 'nonHuman',
         archetype: 'hero',
         weapon: 'physical'
     },
     {
-        name: 'R.O.B. (Robotic Operating Buddy)',
+        name: 'R.O.B.',
         origin: 'Stack-Up (1985)',
         image: 'assets/rob.jpg',
         gender: 'nonHuman',
@@ -389,8 +389,8 @@ const characters = [
         origin: 'Mega Man (1987)',
         image: 'assets/megaman.jpg',
         gender: 'male',
-        archetype: 'badAss',
-        weapon: 'magical'
+        archetype: 'cute',
+        weapon: 'physical'
     },
     {
         name: 'Wii Fit Trainer',
@@ -402,7 +402,7 @@ const characters = [
     },
     {
         name: 'Rosalina & Luma',
-        origin: 'Super Mario Galaxy',
+        origin: 'Super Mario Galaxy (2007)',
         image: 'assets/rosalina.jpg',
         gender: 'female',
         archetype: 'cute',
@@ -418,7 +418,7 @@ const characters = [
     },
     {
         name: 'Greninja',
-        origin: 'Pokemon X and Y',
+        origin: 'Pokemon X and Y (2013)',
         image: 'assets/greninja.jpg',
         gender: 'NH',
         archetype: 'hero',
@@ -583,6 +583,12 @@ const smashApp = {};
 smashApp.init = () => {
     $('form').on('submit',function(e) {
         e.preventDefault();
+        $(function () {
+            $("#submit").val("Get a different character!");
+            $('input[type="radio"]').prop('checked', false);
+            $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
+            return false;
+        });
 
         smashApp.userInput();
         smashApp.createGenderArray();
@@ -612,8 +618,10 @@ smashApp.createWeaponArray = () => {
 
 smashApp.printFinal = () => {
     smashApp.randomChoice = Math.floor(Math.random() * smashApp.finalChoice.length);
-        $('.results').html(`<h2 class="userChoice">${smashApp.finalChoice[smashApp.randomChoice].name}</h2>`);
+        $('.results').html(`<h2 class="userChoice"> ${smashApp.finalChoice[smashApp.randomChoice].name}</h2>`);
+        $('.origin').html(`<h3 class="origin"><span>Origin:</span> ${smashApp.finalChoice[smashApp.randomChoice].origin}</h3>`);
         $('.character-image img').attr('src', `${smashApp.finalChoice[smashApp.randomChoice].image}`);
+        
 };
 
 smashApp.userInput = () => {

@@ -5,58 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Smash Brothers Select</title>
-    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Luckiest+Guy|Mouse+Memoirs" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
    <header>
         <div class="header-bg">
-            <img src="assets/header-bg-image.png" alt="">
+            <img src="assets/header-bg-image.jpg" alt="cast of characters in Smash Brothers">
         </div>
-        <h1>Choose Your Fighter!</h1>
+        <h1 class="title">Choose Your Fighter !</h1>
    </header>
    <main>
-        <form action="#">
-            <fieldset class="gender question">
-                <p>1. Choose your Gender</p>
-                <label for="male">Male</label>
-                <input type="radio" name="gender" required id="male" value="male">
-                <label for="female">Female</label>
-                <input type="radio" name="gender" id="female" value="female">
-                <label for="nonHuman">Non-human</label>
-                <input type="radio" name="gender" id="nonHuman" value="nonHuman">
-            </fieldset>
-            <fieldset class="archetype question">
-                <p>Choose your archetype</p>
-                <label for="hero">Heroic</label>
-                <input type="radio" name="type" required id="hero" value="hero">
-                <label for="cute">Cute</label>
-                <input type="radio" name="type" id="cute" value="cute">
-                <label for="badAss">Bad-Ass</label>
-                <input type="radio" name="type" id="badAss" value="badAss">
-            </fieldset>
-            <fieldset class="weapon question">
-                <p>Choose your weapon</p>
-                <label for="physical">Physical</label>
-                <input type="radio" name="weapon" required id="physical" value="physical">
-                <label for="magic">Magical</label>
-                <input type="radio" name="weapon" id="magical" value="magical">
-                
-                <div>
-                    <input type="submit" value="Super Select Time!">
+       <section class="form-section">
+            <form action="#" class="wrapper">
+                <fieldset class="gender question">
+                    <p>1. Choose your Gender</p>
+                    <div class="option">
+                        <input type="radio" name="gender" required id="male" value="male">
+                        <label for="male">You'd like to play as a human male!</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female">Actually... I'd rather be a femme fatale!</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="gender" id="nonHuman" value="nonHuman">
+                        <label for="nonHuman">On second thought, you dont want to be a human...Humans are weak!</label>
+                    </div>
+                </fieldset>
+                <fieldset class="archetype question">
+                    <p>2. What's your backstory?</p>
+                    <div class="option">
+                        <input type="radio" name="type" required id="hero" value="hero">
+                        <label for="hero">You the protagonist! Hero of the world and protector of the people.</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="type" id="cute" value="cute">
+                        <label for="cute">Magestic by nature, small but deadly, graceful yet dangerous.</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="type" id="badAss" value="badAss">
+                        <label for="badAss">Giant in stature, possibly evil... Definitely a badass.</label>
+                    </div>
+                </fieldset>
+                <fieldset class="weapon question">
+                    <p>3. Decide your weapons... of mass video game destruction.</p>
+                    <div class="option">
+                        <input type="radio" name="weapon" required id="physical" value="physical">
+                        <label for="physical">Physical attacks, Swords, Guns and Fists of fury!</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="weapon" id="magical" value="magical">
+                        <label for="magical">Magical spells, Elemental thingamajigs, and other worldly powers.</label>
+                    </div>
+                </fieldset>
+                        <input type="submit" id="submit" value="Super Select Button" href="#results">
+            </form>
+        </section>
+        <section id="#results">
+            <div class="results-container">
+                <div class="info-container">
+                    <div class="results"></div>
+                    <div class="origin"></div>
+                    <div class="repeat"></div>
                 </div>
-            </fieldset>
-        </form>
-        
-        <section>
-            <div class="results-container"></div>
-            <div class="results"></div>
-            <div class="character-image">
-                <img>
+                <div class="character-image">
+                    <img>
+                </div>
             </div>
         </section>
-
    </main>
+   <!-- <footer>
+       <p class="footer">Built by Nathan Lui. Assets from Super Smash Bros.Ultimate / Nintendo</p>
+   </footer> -->
    
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
     <script src="script.js"></script>

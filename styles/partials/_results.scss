@@ -1,7 +1,61 @@
 .results-container {
     display: flex;
+    height: 40vh;
+    padding-left: 6%;
 }
-.results,
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+}
+
 .character-image {
-    width: 50%;
+    width: 60%;
+}
+.character-image img{
+    max-width: 80%;
+}
+
+@media (max-width: 1700px) {
+    .character-image img{
+    max-width: 90%;
+    }
+}
+
+
+
+.results {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 7rem;
+    padding-top: 10%;
+    color: #363a3d;
+}
+
+@media(max-width: 950px) {
+    .results {
+        font-size: 5rem;
+    }
+
+    .origin {
+        font-size: 4rem;
+    }
+}
+
+@media(max-width: 650px) {
+    .results {
+        font-size: 4rem;
+    }
+    .origin {
+        font-size: 3rem;
+    }
+}
+
+.origin { 
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 5rem;
+    color: #7a90d3;
+    padding-top: 3%;
+    letter-spacing: 1px;
 }

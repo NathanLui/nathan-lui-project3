@@ -136,33 +136,180 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   margin: 0; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  height: 100%vh; }
+
+@media (max-width: 1700px) {
+  html {
+    font-size: 55%; } }
+
+@media (max-width: 1170px) {
+  html {
+    font-size: 50%; } }
+
+@media (max-width: 860px) {
+  .title {
+    font-size: 10rem; }
+  html {
+    font-size: 48%; } }
+
+@media (max-width: 840px) {
+  html {
+    font-size: 45%; } }
+
+@media (max-width: 700px) {
+  html {
+    font-size: 40%; } }
+
+@media (max-width: 500px) {
+  html {
+    font-size: 38%; } }
 
 body {
   font-size: 1.6rem; }
 
 .wrapper {
-  max-width: 1600px;
+  max-width: 1400px;
   width: 90%;
   margin: 0 auto; }
 
+@media (max-width: 600px) {
+  .wrapper {
+    width: 98%; } }
+
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  width: 100%;
+  display: block; }
 
 .header-bg img {
-  max-height: 85vh;
+  max-height: 90vh;
   width: 100%; }
 
 h1 {
   font-family: 'Bangers', cursive;
-  font-size: 17rem;
-  text-align: center; }
+  font-size: 19rem;
+  text-align: center;
+  background: whitesmoke;
+  color: #363a3d;
+  padding: 1% 0;
+  letter-spacing: 3px; }
+
+.question {
+  height: 25vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+@media (max-width: 840px) {
+  .question {
+    height: 20vh; } }
+
+.option {
+  padding: 0.5% 0; }
+
+fieldset {
+  border: none;
+  padding: 1%;
+  margin: 1%; }
+
+.form-section {
+  background: whitesmoke;
+  padding: 2% 0; }
+
+input[type='radio'] {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  border: none; }
+
+input[type='submit'] {
+  width: 50%;
+  height: 80px;
+  text-transform: uppercase;
+  font-family: 'Luckiest Guy', cursive;
+  color: #363a3d;
+  font-size: 4rem;
+  margin-left: 1.5%; }
+
+@media (max-width: 980px) {
+  input[type='submit'] {
+    width: 100%; } }
+
+form p {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 4.5rem;
+  color: #1e2f63; }
+
+@media (max-width: 780px) {
+  form p {
+    font-size: 3rem; } }
+
+label {
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+  padding-left: 1%;
+  color: #7a90d3; }
 
 .results-container {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  height: 40vh;
+  padding-left: 6%; }
 
-.results,
+.info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 40%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
 .character-image {
-  width: 50%; }
+  width: 60%; }
+
+.character-image img {
+  max-width: 80%; }
+
+@media (max-width: 1700px) {
+  .character-image img {
+    max-width: 90%; } }
+
+.results {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 7rem;
+  padding-top: 10%;
+  color: #363a3d; }
+
+@media (max-width: 950px) {
+  .results {
+    font-size: 5rem; }
+  .origin {
+    font-size: 4rem; } }
+
+@media (max-width: 650px) {
+  .results {
+    font-size: 4rem; }
+  .origin {
+    font-size: 3rem; } }
+
+.origin {
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 5rem;
+  color: #7a90d3;
+  padding-top: 3%;
+  letter-spacing: 1px; }
