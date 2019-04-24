@@ -13,3 +13,20 @@ h1 {
     letter-spacing: 3px;
 }
 
+@media (max-width: 620px) {
+    .title {
+        font-size: 9rem;
+    }
+}
+
+@media (max-width: 555px) {
+    .title {
+        font-size: 8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 7rem;
+    }
+}

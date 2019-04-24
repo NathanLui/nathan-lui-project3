@@ -3,24 +3,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // align-items: space-evenly;
+    align-items: space-evenly;
 }
 
 @media (max-width: 840px) {
     .question {
-        height: 20vh;
+        height: 22vh;
     }
 }
 
 .option {
-    padding: 0.5% 0;
+    padding: 1% 0;
 }
 
 fieldset {
     border: none;
-    padding: 1%;
-    margin: 1%;
+    padding: 2% 1%;
+    margin: 2% 1%;
+    margin-bottom: 4%;
 }
+
 
 .form-section {
     background: whitesmoke;
@@ -45,6 +47,19 @@ input[type='submit'] {
 @media(max-width: 980px) {
     input[type='submit'] {
         width: 100%;
+        height: 70px;
+    }
+}
+
+@media(max-width: 435px) {
+    input[type='submit'] {
+        width: 100%;
+        height: 50px;
+        font-size: 2rem;
+    }
+
+    fieldset {
+        margin-bottom: 12%;
     }
 }
 
@@ -53,6 +68,7 @@ form p {
     font-family: 'Luckiest Guy', cursive;
     font-size: 4.5rem;
     color: #1e2f63;
+    padding: 1% 0;
 }
 
 @media (max-width: 780px) {
@@ -69,4 +85,8 @@ label {
   color: #7a90d3
 }
 
-
+@media (max-width: 500px) {
+    label {
+        font-size: 3.0rem;
+    }
+}
